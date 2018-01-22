@@ -23,7 +23,7 @@ import com.ebay.web.service.UserService;
  *
  */
 @Controller
-@RequestMapping("user")
+@RequestMapping("web")
 public class UserController {
 
 	@Autowired
@@ -109,6 +109,16 @@ public class UserController {
 		 return new ModelAndView("bootstrap3"); 
 		
 	}
+	
+	@RequestMapping("index")
+	@ResponseBody
+	public ModelAndView index(HttpServletRequest request, HttpServletResponse response){
+		
+		
+		 return new ModelAndView("website/index"); 
+		
+	}
+	
 	
 	
 
